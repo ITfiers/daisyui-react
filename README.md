@@ -2,4 +2,4 @@
 
 ### `npm run storybook`
 
-Run to see the components in storybook
+Run to see the components in storybook.
