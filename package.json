@@ -58,5 +58,8 @@
     "next-router-mock": "^0.5.1",
     "prettier": "^2.4.1",
     "react-test-renderer": "^17.0.2"
-  }
+  },
+  "files": [
+    "/lib"
+  ]
 }
