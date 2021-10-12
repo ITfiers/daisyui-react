@@ -76,6 +76,7 @@ export function Button({
           "data-testid": "icon-start",
         })}
       {children}
+
       {endIcon &&
         React.cloneElement(endIcon, {
           className: "inline-block w-6 h-6 ml-2 stroke-current",
