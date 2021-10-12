@@ -1,7 +1,7 @@
 {
-  "name": "daisyui-react",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@itfiers/daisyui",
+  "version": "0.0.1",
+  "description": "React Implementation of daisy ui",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 6006 --no-manager-cache"
   },
   "keywords": [],
-  "author": "",
+  "author": "ITfiers",
   "license": "ISC",
   "peerDependencies": {
     "react-icons": "^4.2.0",
