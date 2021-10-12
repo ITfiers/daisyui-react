@@ -13,7 +13,7 @@ Add daisyui plugin in your `tailwind.config.js` file.
 ```js
 module.exports = {
   //...
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui")], // add to plugin array
   // ...
 };
 ```
