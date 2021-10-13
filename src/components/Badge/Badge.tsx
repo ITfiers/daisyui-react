@@ -10,13 +10,24 @@ const badgeSize: Record<string, string> = {
   large: "badge-lg",
   small: "badge-sm",
 };
+const badgecolor: Record<string, string> = {
+  primary: "badge-primary",
+  secondary: "badge-secondary",
+  accent: "badge-accent",
+  ghost: "badge-ghost",
+  link: "badge-link",
+  info: "badge-info",
+  warning: "badge-warning",
+  error: "badge-error",
+  success: "badge-success",
+};
 
-export function Badge(props: BadgeProps) {
+export function Badge({ children, badgeType, size, variant }: BadgeProps) {
   const classes = classNames("badge", {
-    [`badge-${props.badgeType}` as string]: Boolean(props.badgeType),
-    [badgeSize[props.size as string]]: Boolean(props.size),
-    [`badge-${props.variant}` as string]: Boolean(props.variant),
-    "badge-outline": props.variant === "outlined",
+    [badgecolor[badgeType as string]]: Boolean(badgeType),
+    [badgeSize[size as string]]: Boolean(size),
+    [`badge-${variant}` as string]: Boolean(variant),
+    "badge-outline": variant === "outlined",
   });
-  return <div className={`badge ${classes}`}>{props.children}</div>;
+  return <div className={`badge ${classes}`}>{children}</div>;
 }

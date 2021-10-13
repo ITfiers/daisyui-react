@@ -16,11 +16,21 @@ export interface TextareaProps
     | "error";
 }
 
+const textareaColor: Record<string, string> = {
+  primary: "textarea-primary",
+  secondary: "textarea-secondary",
+  accent: "textarea-accent",
+  ghost: "textarea-ghost",
+  link: "textarea-link",
+  info: "textarea-info",
+  warning: "textarea-warning",
+  error: "textarea-error",
+};
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ id, labelText, bordered, color, ...props }: TextareaProps, ref) => {
     const textareaClasses = classNames("textarea", "h-24", {
       "textarea-bordered": bordered,
-      [`textarea-${color}`]: color,
+      [textareaColor[color as string]]: color,
     });
 
     return (

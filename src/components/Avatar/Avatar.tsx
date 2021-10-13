@@ -19,6 +19,10 @@ const avatarShape: Record<string, string> = {
   square: "rounded-btn",
   circle: "rounded-full",
 };
+const avatarRingColor: Record<string, string> = {
+  primary: "ring-primary",
+  secondary: "ring-secondary",
+};
 
 export function Avatar({
   size,
@@ -32,7 +36,7 @@ export function Avatar({
   const classes = classNames("avatar", {
     [avatarSize[size ? size : "medium"]]: true,
     [avatarShape[shape!]]: Boolean(shape),
-    [`ring-${color}`]: Boolean(color) && bordered,
+    [avatarRingColor[color as string]]: Boolean(color) && bordered,
     ring: bordered,
     ["ring-offset-base-100 ring-offset-2"]: offSet,
   });
