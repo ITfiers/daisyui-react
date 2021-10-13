@@ -14,9 +14,15 @@ const radioSize: Record<string, string> = {
   large: "radio-lg",
 };
 
+const radioColor: Record<string, string> = {
+  primary: "radio-primary",
+  secondary: "radio-secondary",
+  accent: "radio-accent",
+};
+
 export function Radio({ id, color, labelText, size, ...props }: RadioProps) {
   const radioClasses = classNames("radio", {
-    [`radio-${color}`]: color,
+    [radioColor[color as string]]: color,
     [radioSize[size as string]]: Boolean(size),
   });
 

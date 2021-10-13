@@ -5,9 +5,16 @@ export interface AlertProps {
   variant?: "info" | "success" | "warning" | "error";
 }
 
+const alertVariant: Record<string, string> = {
+  info: "alert-info",
+  success: "alert-success",
+  warning: "alert-warning",
+  error: "alert-error",
+};
+
 export function Alert(props: AlertProps) {
   const classes = classNames("alert", {
-    [`alert-${props.variant}` as string]: Boolean(props.variant),
+    [alertVariant[props.variant as string]]: Boolean(props.variant),
   });
 
   function Icon() {

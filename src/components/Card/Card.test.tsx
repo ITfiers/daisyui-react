@@ -52,8 +52,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render the image on bottom", () => {
     render(generateTemplate({ imagePosition: "bottom" }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     const cardElementLastChild = cardElemet?.lastElementChild?.children[0];
     expect(cardElementLastChild).toHaveAttribute("alt");
     expect(cardElemet).not.toHaveClass("lg:card-side");
@@ -63,8 +63,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render the image on top", () => {
     render(generateTemplate({ imagePosition: "top" }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     const cardElemetFirstChild = cardElemet?.firstChild?.firstChild;
     expect(cardElemetFirstChild).toHaveAttribute("alt");
     expect(cardElemet).not.toHaveClass("lg:card-side");
@@ -74,26 +74,27 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render the image on left", () => {
     render(generateTemplate({ imagePosition: "left" }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("lg:card-side");
   });
 });
 
 describe("components/Card", () => {
   it("should render the shadow extra-large shadow", () => {
-    render(generateTemplate({ shadow: "extra-large" }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    render(generateTemplate({ shadow: "extraLarge" }));
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("shadow-xl");
   });
 });
 
 describe("components/Card", () => {
   it("should render card with secondary bg color", () => {
-    render(generateTemplate({ cardBg: "secondary" }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    render(generateTemplate({ cardBg: "secondary", textContent: "secondary" }));
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
+
     expect(cardElemet).toHaveClass("bg-secondary text-secondary-content");
   });
 });
@@ -101,8 +102,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render card with glass effect", () => {
     render(generateTemplate({ glassCard: true }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("glass");
   });
 });
@@ -110,8 +111,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render Overlay Image", () => {
     render(generateTemplate({ overlayImage: true }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("image-full");
   });
 });
@@ -119,8 +120,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render passed cardClasses prop", () => {
     render(generateTemplate({ cardClasses: "text-3xl" }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("text-3xl");
   });
 });
@@ -128,8 +129,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render bordered card", () => {
     render(generateTemplate({ isBordered: true }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("bordered");
   });
 });
@@ -137,8 +138,8 @@ describe("components/Card", () => {
 describe("components/Card", () => {
   it("should render centerAlign text in the card", () => {
     render(generateTemplate({ centerAlign: true }));
-    const cardElemet = screen.getByAltText("test image")?.parentElement
-      ?.parentElement;
+    const cardElemet =
+      screen.getByAltText("test image")?.parentElement?.parentElement;
     expect(cardElemet).toHaveClass("text-center");
   });
 });

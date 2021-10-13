@@ -14,9 +14,15 @@ const toggleSize: Record<string, string> = {
   large: "toggle-lg",
 };
 
+const toggleColor: Record<string, string> = {
+  primary: "toggle-primary",
+  secondary: "toggle-secondary",
+  accent: "toggle-accent",
+};
+
 export function Toggle({ id, color, labelText, size, ...props }: ToggleProps) {
   const toggleClasses = classNames("toggle", {
-    [`toggle-${color}`]: Boolean(color),
+    [toggleColor[color as string]]: Boolean(color),
     [toggleSize[size as string]]: Boolean(size),
   });
 

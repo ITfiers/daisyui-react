@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React from "react";
-
 export interface SelectProps
   extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size"> {
   children: React.ReactNode;
@@ -22,6 +21,16 @@ enum InputSizes {
   tiny = "select-xs",
 }
 
+const selectColor: Record<string, string> = {
+  primary: "select-primary",
+  secondary: "select-secondary",
+  accent: "select-accent",
+  info: "select-info",
+  success: "select-success",
+  warning: "select-warning",
+  error: "select-error",
+};
+
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ bordered, size, color, children, ...props }: SelectProps, ref) => {
     const selectClasses = classNames(
@@ -29,7 +38,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       {
         "select-bordered": bordered,
         [InputSizes[size!]]: size,
-        [`select-${color}`]: color,
+        [selectColor[color as string]]: color,
       },
       "w-full",
       "max-w-xs"

@@ -13,6 +13,11 @@ const checkboxSize: Record<string, string> = {
   medium: "checkbox-md",
   large: "checkbox-lg",
 };
+const checkboxColor: Record<string, string> = {
+  primary: "checkbox-primary",
+  secondary: "checkbox-secondary",
+  accent: "checkbox-accent",
+};
 
 export function Checkbox({
   id,
@@ -22,7 +27,7 @@ export function Checkbox({
   ...props
 }: CheckboxProps) {
   const checkboxClasses = classNames("checkbox", {
-    [`checkbox-${color}`]: Boolean(color),
+    [checkboxColor[color as string]]: Boolean(color),
     [checkboxSize[size as string]]: Boolean(size),
   });
 

@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import React from "react";
 
 export interface CardProps {
   children: any[] | React.ReactElement[];
@@ -24,23 +25,13 @@ export interface CardProps {
     | "small"
     | "medium"
     | "large"
-    | "extra-large"
-    | "double-extra-large"
+    | "extraLarge"
+    | "doubleExtraLarge"
     | "inner"
     | "none";
   imagePosition?: "top" | "bottom" | "left" | "none";
+  textContent?: "accent" | "secondary";
 }
-
-let shadowMapping = {
-  default: "",
-  small: "sm",
-  medium: "md",
-  large: "lg",
-  "extra-large": "xl",
-  "double-extra-large": "2xl",
-  inner: "inner",
-  none: "none",
-};
 
 interface ChildrenObj {
   body: React.ReactElement[];
@@ -49,6 +40,37 @@ interface ChildrenObj {
     node: React.ReactElement;
   };
 }
+
+const cardColor: Record<string, string> = {
+  primary: "bg-primary",
+  secondary: "bg-secondary",
+  accent: "bg-accent",
+  neutral: "bg-neutral",
+  base100: "bg-base-100",
+  base200: "bg-base-200",
+  base300: "bg-base-300",
+  ghost: "bg-ghost",
+  link: "bg-link",
+  info: "bg-info",
+  warning: "bg-warning",
+  error: "bg-error",
+  success: "bg-success",
+};
+
+const shadowMapping: Record<string, string> = {
+  default: "",
+  small: "shadow-sm",
+  medium: "shadow-md",
+  large: "shadow-lg",
+  extraLarge: "shadow-xl",
+  doubleExtraLarge: "shadow-2xl",
+  inner: "shadow-inner",
+  none: "shadow-none",
+};
+const textContentColor: Record<string, string> = {
+  accent: " text-accent-content",
+  secondary: " text-secondary-content",
+};
 
 export function Card({
   glassCard,
@@ -60,6 +82,7 @@ export function Card({
   centerAlign,
   children,
   cardClasses,
+  textContent,
 }: CardProps) {
   let objs: ChildrenObj = {
     body: [],
@@ -79,11 +102,12 @@ export function Card({
   });
 
   const classes = classNames("card", {
-    [`shadow-${shadowMapping[shadow!]} ` as string]: shadow,
+    [shadowMapping[shadow as string]]: shadow,
     "bordered ": isBordered,
     "text-center ": centerAlign,
     "image-full ": overlayImage,
-    [`bg-${cardBg} text-${cardBg}-content `]: cardBg,
+    [cardColor[cardBg as string]]: cardBg,
+    [textContentColor[textContent as string]]: textContent,
     "lg:card-side ": imagePosition === "left",
     "glass text-neutral-content ": glassCard,
     [cardClasses + " "]: cardClasses,
