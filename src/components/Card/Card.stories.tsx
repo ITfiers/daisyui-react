@@ -42,43 +42,47 @@ const Template: Story<CardProps> = (args) => (
 
 export const Default = Template.bind({});
 
-Default.args = { imagePosition: "top" };
+Default.args = {};
 
-export const ImageBottom = Template.bind({});
+// export const Default = Template.bind({});
 
-ImageBottom.args = { imagePosition: "bottom" };
+// Default.args = { imagePosition: "top" };
 
-export const ImageOverlay = Template.bind({});
+// export const ImageBottom = Template.bind({});
 
-ImageOverlay.args = { overlayImage: true, imagePosition: "top" };
+// ImageBottom.args = { imagePosition: "bottom" };
 
-export const ShadowCenterPadding = Template.bind({});
+// export const ImageOverlay = Template.bind({});
 
-ShadowCenterPadding.args = {
-  centerAlign: true,
-  shadow: "doubleExtraLarge",
-  imagePosition: "top",
-};
+// ImageOverlay.args = { overlayImage: true, imagePosition: "top" };
 
-export const HorizontalCard = Template.bind({});
+// export const ShadowCenterPadding = Template.bind({});
 
-HorizontalCard.args = {
-  shadow: "inner",
-  imagePosition: "left",
-};
+// ShadowCenterPadding.args = {
+//   centerAlign: true,
+//   shadow: "doubleExtraLarge",
+//   imagePosition: "top",
+// };
 
-export const GlassCard = Template.bind({});
+// export const HorizontalCard = Template.bind({});
 
-GlassCard.args = {
-  shadow: "medium",
-  imagePosition: "left",
-  glassCard: true,
-};
+// HorizontalCard.args = {
+//   shadow: "inner",
+//   imagePosition: "left",
+// };
 
-export const SimpleCard = Template.bind({});
+// export const GlassCard = Template.bind({});
 
-SimpleCard.args = {
-  imagePosition: "none",
-  overlayImage: true,
-  cardBg: "secondary",
-};
+// GlassCard.args = {
+//   shadow: "medium",
+//   imagePosition: "left",
+//   glassCard: true,
+// };
+
+// export const SimpleCard = Template.bind({});
+
+// SimpleCard.args = {
+//   imagePosition: "none",
+//   overlayImage: true,
+//   cardBg: "secondary",
+// };
