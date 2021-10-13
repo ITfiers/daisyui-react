@@ -56,7 +56,7 @@ export const ShadowCenterPadding = Template.bind({});
 
 ShadowCenterPadding.args = {
   centerAlign: true,
-  shadow: "double-extra-large",
+  shadow: "doubleExtraLarge",
   imagePosition: "top",
 };
 

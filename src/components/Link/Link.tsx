@@ -6,9 +6,15 @@ export interface LinkProps
   color?: "primary" | "secondary" | "accent";
 }
 
+const linktColor: Record<string, string> = {
+  primary: "link-primary",
+  secondary: "link-secondary",
+  accent: "link-accent",
+};
+
 export function Link({ color, ...props }: LinkProps) {
   const linkClasses = classNames("link", {
-    [`link-${color}`]: Boolean(color),
+    [linktColor[color as string]]: Boolean(color),
   });
   return (
     <a className={linkClasses} {...props}>

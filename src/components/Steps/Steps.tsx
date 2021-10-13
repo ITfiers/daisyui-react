@@ -20,9 +20,21 @@ export interface StepProps {
   dataContent?: "?" | "!" | "✓" | "✕" | "★" | "" | "●";
 }
 
+const stepColor: Record<string, string> = {
+  primary: "step-primary",
+  secondary: "step-secondary",
+  accent: "step-accent",
+  ghost: "step-ghost",
+  link: "step-link",
+  info: "step-info",
+  warning: "step-warning",
+  error: "step-error",
+  success: "step-success",
+};
+
 export function Step(props: StepProps) {
   const stepClasses = classNames("step", {
-    [`step-${props.colorType}` as string]: Boolean(props.colorType),
+    [stepColor[props.colorType as string]]: Boolean(props.colorType),
   });
   return (
     <li data-Content={props.dataContent} className={stepClasses}>

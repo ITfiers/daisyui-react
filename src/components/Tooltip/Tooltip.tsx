@@ -15,6 +15,23 @@ export interface TooltipProps {
   children: React.ReactNode;
 }
 
+const tooltipColor: Record<string, string> = {
+  primary: "tooltip-primary",
+  secondary: "tooltip-secondary",
+  accent: "tooltip-accent",
+  info: "tooltip-info",
+  success: "tooltip-success",
+  warning: "tooltip-warning",
+  error: "tooltip-error",
+};
+
+const tooltipPosition: Record<string, string> = {
+  top: "tooltip-top",
+  bottom: "tooltip-bottom",
+  left: "tooltip-left",
+  right: "tooltip-right",
+};
+
 export function Tooltip({
   alwaysOpen,
   position,
@@ -24,8 +41,8 @@ export function Tooltip({
 }: TooltipProps) {
   const classes = classNames("tooltip", {
     ["tooltip-open" as string]: Boolean(alwaysOpen),
-    [`tooltip-${position}` as string]: Boolean(position),
-    [`tooltip-${color}` as string]: Boolean(color),
+    [tooltipPosition[position as string]]: Boolean(position),
+    [tooltipColor[color as string]]: Boolean(color),
   });
 
   return (

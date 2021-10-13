@@ -23,6 +23,18 @@ enum InputSizes {
   tiny = "input-xs",
 }
 
+const inputColor: Record<string, string> = {
+  primary: "input-primary",
+  secondary: "input-secondary",
+  accent: "input-accent",
+  ghost: "input-ghost",
+  link: "input-link",
+  info: "input-info",
+  warning: "input-warning",
+  error: "input-error",
+  success: "input-success",
+};
+
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     { color, labelText, id, bordered, size, className, ...props }: InputProps,
@@ -33,7 +45,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       {
         "input-bordered": bordered,
         [InputSizes[size!]]: size,
-        [`input-${color}`]: color,
+        [inputColor[color as string]]: color,
       },
       className
     );

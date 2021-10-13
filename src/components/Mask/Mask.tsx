@@ -7,26 +7,48 @@ export interface MaskProps {
     | "squircle"
     | "heart"
     | "hexagon"
-    | "hexagon-2"
+    | "hexagon2"
     | "ecagon"
     | "pentagon"
     | "diamond"
     | "square"
     | "circle"
     | "parallelogram"
-    | "parallelogram-2"
-    | "parallelogram-3"
-    | "parallelogram-4"
+    | "parallelogram2"
+    | "parallelogram3"
+    | "parallelogram4"
     | "star"
-    | "star-2"
+    | "star2"
     | "triangle"
-    | "triangle-2"
-    | "triangle-3"
-    | "triangle-4";
+    | "triangle2"
+    | "triangle3"
+    | "triangle4";
 }
+const inputColor: Record<string, string> = {
+  squircle: "mask-squircle",
+  heart: "mask-heart",
+  hexagon: "mask-hexagon",
+  hexagon2: "mask-hexagon-2",
+  ecagon: "mask-ecagon",
+  pentagon: "mask-pentagon",
+  diamond: "mask-diamond",
+  sqaure: "mask-square",
+  circle: "mask-circle",
+  parallelogram: "mask-parallelogram",
+  parallelogram2: "mask-parallelogram-2",
+  parallelogram3: "mask-parallelogram-3",
+  parallelogram4: "mask-parallelogram-4",
+  star: "mask-star",
+  star2: "mask-star-2",
+  triangle: "mask-triangle",
+  triangle2: "mask-triangle-2",
+  triangle3: "mask-triangle-3",
+  triangle4: "mask-triangle-4",
+};
+
 export function Mask(props: MaskProps) {
   const maskClasses = classNames("mask", {
-    [`mask-${props.shape}`]: props.shape,
+    [inputColor[props.shape as string]]: props.shape,
   });
   return <img src={props.src} alt={props.alt} className={maskClasses} />;
 }
