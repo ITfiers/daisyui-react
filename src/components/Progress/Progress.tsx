@@ -1,5 +1,5 @@
-import classNames, { Value } from "classnames";
-import React from "react";
+import classNames from "classnames";
+
 export interface ProgressProps {
   progressType?:
     | "primary"
@@ -23,7 +23,6 @@ const progressColor: Record<string, string> = {
   warning: "progress-warning",
   error: "progress-error",
 };
-
 export function Progress({
   className,
   progressType,
