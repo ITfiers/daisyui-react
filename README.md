@@ -1,3 +1,13 @@
+<div align="center">
+
+## Daisyui-React
+
+**React based component library with Tailwind CSS Utility classes**
+
+[See Storybook](https://daisyui-react.netlify.app/)
+
+</div>
+
 ## 🌼 Features
 
 <details>
@@ -9,8 +19,7 @@
   daisyUI-react is a react based component library with Tailwind CSS Utility classes.
 - **Tailwind CSS plugin**  
   daisyUI-react is a Tailwind CSS plugin. Install it and add it to your `tailwind.config.js` file.
-- **Component classes**  
-  Adds component classes to Tailwind. Classes like `btn`, `card`,… So you will end up with a cleaner HTML.
+
 - **Semantic color names**  
   Adds color names like `primary`, `secondary`, `accent`,….
 - **Customizable**  
@@ -55,3 +64,62 @@ module.exports = {
   // ...
 };
 ```
+
+---
+
+## 🚀 Useage
+
+Use Daisyui-React component to build your UI.
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import Button from "@itfiers/daisyui/Button";
+function App() {
+  return (
+    <Button size="small" buttonType="primary" className="p-1">
+      Hello World
+    </Button>
+  );
+}
+ReactDOM.render(<App />, document.querySelector("#app"));
+```
+
+---
+
+## List of Components
+
+<details>
+<summary>
+  show / hide
+</summary>
+
+- Alert
+- Avatar
+- Badge
+- Breadcrumb
+- Button
+- Card
+- CheckBox
+- Collapse
+- Divider
+- Drawer
+- DropDown
+- Img
+- Indicator
+- Input
+- Link
+- Mask
+- Modal
+- Pagination
+- Progress
+- Radio
+- Select
+- Steps
+- TabList
+- Textarea
+- Toggle
+- Tooltip
+</details>
+
+---
