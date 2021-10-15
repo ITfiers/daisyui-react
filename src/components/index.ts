@@ -19,3 +19,6 @@ export * from "./Mask/Mask";
 export * from "./Steps/Steps";
 export * from "./Collapse/Collapse";
 export * from "./Progress/Progress";
+export * from "./Img/Img";
+export * from "./Modal/Modal";
+export * from "./DropDown/DropDown";
