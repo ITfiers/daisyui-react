@@ -1,4 +1,5 @@
 import { Meta, Story } from "@storybook/react";
+import { Button } from "../Button/Button";
 
 import { Modal, ModalProps } from "./Modal";
 
@@ -8,11 +9,14 @@ export default {
 } as Meta;
 const Template: Story<ModalProps> = (args) => (
   <Modal {...args}>
-    <p>
+    <div className="m-8">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo voluptate
       omnis laborum aliquam quis, dicta quos reprehenderit esse, laudantium aut,
       adipisci totam tempora a magnam aliquid mollitia ratione nam unde?
-    </p>
+    </div>
+    <Button size="small" className="float-right mt-5 mr-3 mb-3">
+      Close
+    </Button>
   </Modal>
 );
 
