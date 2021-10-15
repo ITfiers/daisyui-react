@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { ClientOnlyPortal } from "src/utils/client-only-portal";
-import { useClickOutside } from "src/hooks/useClickOutside";
+import { ClientOnlyPortal } from "../../utils/client-only-portal";
+import { useClickOutside } from "../../hooks/useClickOutside";
 
 export interface ModalProps {
   children: React.ReactNode;
