@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import React from "react";
 
 export interface LinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -12,13 +13,15 @@ const linktColor: Record<string, string> = {
   accent: "link-accent",
 };
 
-export function Link({ color, ...props }: LinkProps) {
-  const linkClasses = classNames("link", {
-    [linktColor[color as string]]: Boolean(color),
-  });
-  return (
-    <a className={linkClasses} {...props}>
-      {props.children}
-    </a>
-  );
-}
+export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  ({ color, ...props }, ref) => {
+    const linkClasses = classNames("link", {
+      [linktColor[color as string]]: Boolean(color),
+    });
+    return (
+      <a ref={ref} className={linkClasses} {...props}>
+        {props.children}
+      </a>
+    );
+  }
+);
