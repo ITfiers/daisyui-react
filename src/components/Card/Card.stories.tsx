@@ -28,7 +28,7 @@ export default {
 
 const Template: Story<CardProps> = (args) => (
   <Card {...args}>
-    <CardImage src="https://picsum.photos/id/1002/400/250" alt="test image" />
+    <CardImage src="https://picsum.photos/id/1005/400/250" alt="test image" />
     <CardContent title="Top Image" badgeText="New">
       Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit
       necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.
@@ -42,47 +42,4 @@ const Template: Story<CardProps> = (args) => (
 
 export const Default = Template.bind({});
 
-Default.args = {};
-
-// export const Default = Template.bind({});
-
-// Default.args = { imagePosition: "top" };
-
-// export const ImageBottom = Template.bind({});
-
-// ImageBottom.args = { imagePosition: "bottom" };
-
-// export const ImageOverlay = Template.bind({});
-
-// ImageOverlay.args = { overlayImage: true, imagePosition: "top" };
-
-// export const ShadowCenterPadding = Template.bind({});
-
-// ShadowCenterPadding.args = {
-//   centerAlign: true,
-//   shadow: "doubleExtraLarge",
-//   imagePosition: "top",
-// };
-
-// export const HorizontalCard = Template.bind({});
-
-// HorizontalCard.args = {
-//   shadow: "inner",
-//   imagePosition: "left",
-// };
-
-// export const GlassCard = Template.bind({});
-
-// GlassCard.args = {
-//   shadow: "medium",
-//   imagePosition: "left",
-//   glassCard: true,
-// };
-
-// export const SimpleCard = Template.bind({});
-
-// SimpleCard.args = {
-//   imagePosition: "none",
-//   overlayImage: true,
-//   cardBg: "secondary",
-// };
+Default.args = { imagePosition: "left" };
