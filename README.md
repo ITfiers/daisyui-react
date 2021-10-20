@@ -15,11 +15,8 @@
   show / hide
 </summary>
 
-- **Rectjs based**  
-  daisyUI-react is a react based component library with Tailwind CSS Utility classes.
-- **Tailwind CSS plugin**  
-  daisyUI-react is a Tailwind CSS plugin. Install it and add it to your `tailwind.config.js` file.
-
+- **Reactjs based**  
+  daisyui-react is a ReactJs based component library with Tailwind CSS Utility classes.
 - **Semantic color names**  
   Adds color names like `primary`, `secondary`, `accent`,….
 - **Customizable**  
@@ -60,6 +57,7 @@ Add daisyui plugin in your `tailwind.config.js`.
 ```js
 module.exports = {
   //...
+  purge: ["./node_modules/\\@itfiers/daisyui/**/*.js"],
   plugins: [require("daisyui")], // add to plugin array
   // ...
 };
@@ -74,7 +72,7 @@ Use Daisyui-React component to build your UI.
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "@itfiers/daisyui/Button";
+import { Button } from "@itfiers/daisyui";
 function App() {
   return (
     <Button size="small" buttonType="primary" className="p-1">
