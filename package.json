@@ -1,6 +1,6 @@
 {
   "name": "@itfiers/daisyui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React Implementation of daisy ui",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
