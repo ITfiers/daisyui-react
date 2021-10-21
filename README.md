@@ -3,8 +3,10 @@
 ## Daisyui-React
 
 **React based component library with Tailwind CSS Utility classes**
-
-[See Storybook](https://daisyui-react.netlify.app/)
+ 
+ [See Demo on Storybook](https://daisyui-react.netlify.app/)
+  
+![Screenshot from 2021-10-14 12-06-29](https://user-images.githubusercontent.com/32792779/138229300-a07674ea-81ab-4b00-8fae-1886c9d86b48.png)
 
 </div>
 
