@@ -22,3 +22,4 @@ export * from "./Progress/Progress";
 export * from "./Img/Img";
 export * from "./Modal/Modal";
 export * from "./DropDown/DropDown";
+export * from "./Loader/Loader";
